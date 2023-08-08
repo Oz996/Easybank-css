@@ -1,0 +1,56 @@
+@use "../abstracts/" as *;
+
+section {
+  background-color: $light-gray-blue;
+  padding-bottom: 1rem;
+  padding-top: 6rem;
+  .section-header {
+    width: 36rem;
+    @include sm {
+      width: 24rem;
+      text-align: center;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 2.3rem;
+      color: $dark-blue;
+    }
+    p {
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      color: $gray-blue;
+    }
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 3rem;
+    }
+    margin-bottom: 12rem;
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      img {
+        width: 4.5rem;
+      }
+      h2 {
+        font-weight: 400;
+        color: $dark-blue;
+      }
+      p {
+        color: $gray-blue;
+        width: 16.2rem;
+        @include sm {
+          width: 23rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../abstracts/" as *;
+
+article {
+  margin-block: 8.5rem;
+  h1 {
+    font-weight: 400;
+    font-size: 2.3rem;
+    color: $dark-blue;
+    margin-bottom: 3rem;
+    @include sm {
+      text-align: center;
+    }
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    @include sm {
+      display: flex;
+      flex-direction: column;
+    }
+    .article-div {
+      @include sm {
+        width: 80%;
+        text-align: start;
+      }
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      @include sm {
+        align-items: center;
+      }
+      h2 {
+        color: $dark-blue;
+        font-weight: 400;
+        font-size: 1.3rem;
+        padding-inline: 1rem;
+        width: 80%;
+        transition: 0.3s;
+        @include sm {
+          width: 100%;
+        }
+
+        &:hover {
+          color: $green;
+        }
+      }
+      p {
+        color: $gray-blue;
+        padding-inline: 1rem;
+        width: 83%;
+        @include sm {
+          width: 100%;
+        }
+      }
+      .author-text {
+        color: $gray-blue;
+        font-size: 0.9rem;
+        margin-bottom: -1rem;
+        padding-inline: 1rem;
+      }
+      img {
+        width: 20rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+        @include sm {
+          width: 21rem;
+        }
+      }
+      .img {
+        height: 13.25rem;
+      }
+    }
+  }
+}

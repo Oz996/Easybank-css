@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+button {
+  color: white;
+  padding: 1rem;
+  width: 10rem;
+  border-radius: 2rem;
+  border: none;
+  background-image: linear-gradient(to right, $lime-green, $bright-cyan);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 90%;
+    transform: scale(103%);
+  }
+  &:active {
+    opacity: 60%;
+  }
+}

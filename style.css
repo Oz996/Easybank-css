@@ -148,9 +148,9 @@ header nav a:hover {
   display: flex;
   flex-direction: column !important;
   position: absolute;
-  right: 5rem;
+  right: 0;
   top: 5.5rem;
-  width: 20rem;
+  width: 100%;
   padding: 1rem 3rem;
   z-index: 1;
   text-align: center;
@@ -248,7 +248,7 @@ footer .end {
   align-items: end;
   margin-left: 15rem;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   footer .end {
     margin: 0;
   }
@@ -313,15 +313,7 @@ a {
 }
 @media screen and (max-width: 900px) {
   .hero .hero-image {
-    background-image: url("/images/bg-intro-mobile.svg");
-    background-repeat: no-repeat;
-    background-position: 1;
-    background-size: 100%;
-    position: relative;
-    width: 125%;
-    top: -15.5rem;
-    left: -3.1rem;
-    margin-bottom: -19rem;
+    display: none;
   }
 }
 .hero .hero-content {
@@ -335,6 +327,8 @@ a {
   .hero .hero-content {
     align-items: center;
     text-align: center;
+    width: 100%;
+    margin-top: 5rem;
   }
 }
 .hero .hero-content h1 {
@@ -369,7 +363,7 @@ section .section-header {
 }
 @media screen and (max-width: 900px) {
   section .section-header {
-    width: 24rem;
+    width: 100%;
     text-align: center;
   }
 }
@@ -388,6 +382,12 @@ section .cards {
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 12rem;
 }
+@media screen and (max-width: 1200px) {
+  section .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
 @media screen and (max-width: 900px) {
   section .cards {
     display: flex;
@@ -395,13 +395,19 @@ section .cards {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 3rem;
   }
 }
 section .cards div {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 16.2rem;
+}
+@media screen and (max-width: 900px) {
+  section .cards div {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 section .cards div img {
   width: 4.5rem;
@@ -412,14 +418,7 @@ section .cards div h2 {
 }
 section .cards div p {
   color: hsl(233, 8%, 62%);
-  width: 16.2rem;
 }
-@media screen and (max-width: 900px) {
-  section .cards div p {
-    width: 23rem;
-  }
-}
-
 article {
   margin-block: 8.5rem;
 }
@@ -439,6 +438,12 @@ article .articles {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
+@media screen and (max-width: 1200px) {
+  article .articles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
 @media screen and (max-width: 900px) {
   article .articles {
     display: flex;
@@ -447,7 +452,7 @@ article .articles {
 }
 @media screen and (max-width: 900px) {
   article .articles .article-div {
-    width: 80%;
+    width: 100%;
     text-align: start;
   }
 }
@@ -466,13 +471,7 @@ article .articles div h2 {
   font-weight: 400;
   font-size: 1.3rem;
   padding-inline: 1rem;
-  width: 80%;
   transition: 0.3s;
-}
-@media screen and (max-width: 900px) {
-  article .articles div h2 {
-    width: 100%;
-  }
 }
 article .articles div h2:hover {
   color: hsl(150, 47%, 46%);
@@ -480,12 +479,6 @@ article .articles div h2:hover {
 article .articles div p {
   color: hsl(233, 8%, 62%);
   padding-inline: 1rem;
-  width: 83%;
-}
-@media screen and (max-width: 900px) {
-  article .articles div p {
-    width: 100%;
-  }
 }
 article .articles div .author-text {
   color: hsl(233, 8%, 62%);
